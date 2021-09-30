@@ -63,7 +63,7 @@ console.log(usernameValidation("u__hello_world123"));
 
 
 
-//Factorial
+//4. Factorial
 function factorial(n) {
     return n === 1 ? 1 : factorial(n - 1);
 }
@@ -89,3 +89,21 @@ function bracketCombibation(num) {
 }
 const finalResult = bracketCombibation(5)
 console.log(finalResult);
+
+
+
+
+// Find Intersection 
+function FindIntersection(strArr) {
+  const arrayOne = strArr[0].split(", ");
+  const arrayTwo = strArr[1].split(", ");
+    let result = arrayOne.filter((arrTwo) => arrayTwo.find((arrOne) => arrOne === arrTwo))
+    return result.length > 0 ? result.join(',') : 'false';
+}
+
+
+const myArray = ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"];
+console.log(myArray);
+const finalResult = FindIntersection(["1, 3, 5, 10, 17, 18", "2, 4, 9, 4"]);
+console.log(finalResult);
+//output: False
